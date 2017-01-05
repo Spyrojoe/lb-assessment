@@ -4,7 +4,8 @@
   justify-content: space-between;
   align-items: flex-start; }
 
-.header-image {
+.logo,
+.logo-image {
   display: block; }
 
 .nav--primary {
@@ -12,6 +13,10 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start; }
+
+footer .logo-image {
+  margin-left: auto;
+  margin-right: auto; }
 
 * {
   box-sizing: border-box; }

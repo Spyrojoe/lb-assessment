@@ -1,7 +1,9 @@
 .header__row{
   @include flex(row, nowrap, space-between, flex-start);
 }
-.header-image{
+
+.logo,
+.logo-image{
   display: block;
 }
 .nav--primary{

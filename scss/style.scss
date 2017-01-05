@@ -4,6 +4,9 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@import 'header';
+
 *{
   box-sizing: border-box;
   // background: rgba(0,0,0,.02);

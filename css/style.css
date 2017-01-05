@@ -1,3 +1,18 @@
+.header__row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start; }
+
+.header-image {
+  display: block; }
+
+.nav--primary {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start; }
+
 * {
   box-sizing: border-box; }
 

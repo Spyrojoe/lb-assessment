@@ -1,0 +1,9 @@
+.header__row{
+  @include flex(row, nowrap, space-between, flex-start);
+}
+.header-image{
+  display: block;
+}
+.nav--primary{
+  @include flex(row, nowrap, space-between, flex-start);
+}

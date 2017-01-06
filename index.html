@@ -4,74 +4,111 @@
   <title>Blog Layout</title>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 
   <div class="wrap">
 
     <header>
-      <div class="header__row">
-        <a href="" class="logo">
-          <img src="http://placehold.it/300x100" class="logo-image">
-        </a>
-        <nav class="nav nav--secondary">
-          <a href="">link</a>
-          <a href="">link</a>
-          <a href="">link</a>
+      <a href="" class="logo">
+        <img src="http://placehold.it/300x100" class="logo-image">
+      </a>
+      <div class="nav__row">
+        <nav class="nav nav--primary">
+          <a href="">Home</a>
+          <a href="">Video</a>
+          <a href="">Forum</a>
+          <a href="">Newsletter</a>
+          <a href="">About</a>
+        </nav>
+        <nav class="tabs">
+          <a href="" class="tab">most viewed</a>
+          <a href="" class="tab">most shared</a>
+          <a href="" class="tab">most commented</a>
+          <i class="material-icons tabs__mobile-selector">keyboard_arrow_down</i>
         </nav>
       </div>
-      <nav class="nav nav--primary">
-        <a href="">link</a>
-        <a href="">link</a>
-        <a href="">link</a>
-        <a href="">link</a>
-        <a href="">link</a>
-      </nav>
     </header>
 
-    <div class="article-gallery">
-      <article class="article-preview article-preview--large">
-        <div class="article-preview__img article-preview__img--large" id="img1"></div>
-        <div class="article-preview__content">
-          <time datetime="2016-12-15" class="article-preview__time">December 15, 2016</time>
-          <h2 class="article-preview__title">The Cloud: Just someone else's computer?</h2>
-          <p class="article-preview__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </article>
-      <article class="article-preview article-preview--small">
-        <div class="article-preview__img article-preview__img--small" id="img2"></div>
-        <div class="article-preview__content article-preview__content--small">
-          <time datetime="2016-12-15" class="article-preview__time">December 15, 2016</time>
-          <h2 class="article-preview__title article-preview__title--small">No, this toothbrush</h2>
-          <p class="article-preview__summary article-preview__summary--small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </article>
-      <article class="article-preview article-preview--small">
-        <div class="article-preview__img article-preview__img--small" id="img3"></div>
-        <div class="article-preview__content article-preview__content--small">
-          <time datetime="2016-12-15" class="article-preview__time">December 15, 2016</time>
-          <h2 class="article-preview__title article-preview__title--small">Battery cells are now in production at Tesla’s Gigafactory</h2>
-          <p class="article-preview__summary article-preview__summary--small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </article>
-      <article class="article-preview article-preview--large" style="flex-direction: row-reverse;">
-        <div class="article-preview__img article-preview__img--large" id="img4"></div>
-        <div class="article-preview__content">
-          <time datetime="2016-12-15" class="article-preview__time">December 15, 2016</time>
-          <h2 class="article-preview__title">Amazon’s Alexa is everywhere at CES 2017</h2>
-          <p class="article-preview__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </article>
-    </div>
+    <main>
+      <section class="gallery">
+        <article class="gallery__item gallery__item--large">
+          <div class="gallery__item__img gallery__item__img--large" id="img1"></div>
+          <div class="gallery__item__content">
+            <time datetime="2016-12-15" class="gallery__item__time">December 15, 2016</time>
+            <h2 class="gallery__item__title">The Cloud: Just someone else's computer?</h2>
+            <p class="gallery__item__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </article>
+        <article class="gallery__item gallery__item--small">
+          <div class="gallery__item__img gallery__item__img--small" id="img2"></div>
+          <div class="gallery__item__content gallery__item__content--small">
+            <time datetime="2016-12-15" class="gallery__item__time">December 15, 2016</time>
+            <h2 class="gallery__item__title gallery__item__title--small">No, this toothbrush</h2>
+            <p class="gallery__item__summary gallery__item__summary--small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </article>
+        <article class="gallery__item gallery__item--small">
+          <div class="gallery__item__img gallery__item__img--small" id="img3"></div>
+          <div class="gallery__item__content gallery__item__content--small">
+            <time datetime="2016-12-15" class="gallery__item__time">December 15, 2016</time>
+            <h2 class="gallery__item__title gallery__item__title--small">Battery cells are now in production at Tesla’s Gigafactory</h2>
+            <p class="gallery__item__summary gallery__item__summary--small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </article>
+        <article class="gallery__item gallery__item--large" style="flex-direction: row-reverse;">
+          <div class="gallery__item__img gallery__item__img--large" id="img4"></div>
+          <div class="gallery__item__content">
+            <time datetime="2016-12-15" class="gallery__item__time">December 15, 2016</time>
+            <h2 class="gallery__item__title">Amazon’s Alexa is everywhere at CES 2017</h2>
+            <p class="gallery__item__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </article>
+      </section>
+
+      <div class="grid">
+        <section class="feed col col--70">
+          <article class="feed-item">
+            <img src="http://placehold.it/200x130" class="feed-item__image">
+            <div class="feed-item__content">
+              <h2 class="feed-item__title">Here's a Title</h2>
+              <p class="feed-item__summary">Donec vitae enim ac erat auctor fermentum. Praesent quis justo quis nisl vulputate congue. Vestibulum id nunc sed purus imperdiet consectetur eu id erat. Nulla posuere ipsum sed posuere laoreet. Ut consectetur eleifend ipsum, ut iaculis purus convallis a. Suspendisse potenti.</p>
+            </div>
+          </article>
+        </section>
+        <section class="sidebar col col--30">
+          <ul>
+            <li><a href="">foo</a></li>
+            <li><a href="">foo</a></li>
+            <li><a href="">foo</a></li>
+          </ul>
+        </section>
+      </div>
+
+    </main>
 
     <footer>
       <a href="" class="logo">
-        <img src="http://placehold.it/300x100" class="header-image">
+        <img src="http://placehold.it/150x40" class="header-image">
       </a>
       <div>&copy;2017</div>
     </footer>
 
   </div>
+
+  <script>
+    $(document).ready(function(){
+
+        $('.feed-item').each(function(){
+          for (i = 0; i <= 8; i++){
+            $(this).clone().appendTo('.feed');
+          }
+        });
+
+    });
+  </script>
 
 </body>
 </html>

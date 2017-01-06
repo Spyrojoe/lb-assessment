@@ -1,0 +1,9 @@
+.grid{
+  @include flex(row, nowrap, space-between, flex-start);
+}
+.col--70{
+  width: 70%;
+}
+.col--30{
+  width: 30%;
+}

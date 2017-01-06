@@ -1,11 +1,29 @@
-.header__row{
-  @include flex(row, nowrap, space-between, flex-start);
+.nav__row{
+  @include flex(row, nowrap, space-between, flex-end);
 }
 
-.logo,
+.logo{
+  display: inline-block;
+}
 .logo-image{
   display: block;
 }
-.nav--primary{
-  @include flex(row, nowrap, space-between, flex-start);
+
+.nav{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  a{
+    margin-right: 10px;
+    padding: 10px 0;
+    // outline: 1px orange solid;
+    color: #207ce5;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  a:last-child{
+    margin-right: 0;
+  }
 }

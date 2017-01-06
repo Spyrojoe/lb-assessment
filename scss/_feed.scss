@@ -1,0 +1,12 @@
+.feed-item{
+  @include flex(row, nowrap, flex-start, flex-start);
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px $primary-color solid;
+}
+.feed-item__image{
+  margin-right: 10px;
+}
+.feed-item__title{
+  margin-top: 0;
+}

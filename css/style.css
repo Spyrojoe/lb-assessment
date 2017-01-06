@@ -1,56 +1,93 @@
-.header__row {
+.grid {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start; }
 
-.logo,
+.col--70 {
+  width: 70%; }
+
+.col--30 {
+  width: 30%; }
+
+.nav__row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end; }
+
+.logo {
+  display: inline-block; }
+
 .logo-image {
   display: block; }
 
-.nav--primary {
+.nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between; }
+  .nav a {
+    margin-right: 10px;
+    padding: 10px 0;
+    color: #207ce5;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center; }
+  .nav a:last-child {
+    margin-right: 0; }
+
+.tabs {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: flex-start; }
+  align-items: flex-end; }
 
-footer .logo-image {
-  margin-left: auto;
-  margin-right: auto; }
+.tab {
+  padding: 10px;
+  border: 1px #207ce5 solid;
+  background: #191919;
+  color: white;
+  font-size: 12px;
+  text-align: right;
+  text-decoration: none;
+  white-space: nowrap; }
 
-* {
-  box-sizing: border-box; }
+.tab--active {
+  font-size: 14px; }
 
-html, body {
-  margin: 0;
-  height: 100%; }
+.material-icons.tabs__mobile-selector {
+  display: none; }
 
-body {
-  margin-top: 30px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background: #191919; }
+@media screen and (max-width: 800px) {
+  .material-icons.tabs__mobile-selector {
+    display: block; }
 
-.wrap {
-  width: 95%;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto; }
+  .tabs {
+    align-items: center;
+    border: 1px #207ce5 solid; }
 
-.article-gallery {
+  .tab {
+    border: 0; }
+
+  .tab:nth-of-type(2),
+  .tab:nth-of-type(3) {
+    display: none; } }
+.gallery {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: stretch;
+  margin-bottom: 20px;
   padding: 1px;
   background: linear-gradient(135deg, #88bae8 0%, #207ce5 100%); }
 
-.article-preview {
+.gallery__item {
   margin: 1px;
   background: #191919;
-  color: #fff;
   overflow: hidden; }
 
-.article-preview__img {
+.gallery__item__img {
   width: 100%;
   height: 100%;
   min-width: 360px;
@@ -71,60 +108,59 @@ body {
 #img4 {
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_92564034.jpeg); }
 
-.article-preview__title {
+.gallery__item__title {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 300;
   line-height: 1;
   text-transform: uppercase;
   margin-bottom: 10px; }
 
-.article-preview__content {
+.gallery__item__content {
   padding: 16px;
   font-size: 18px;
-  background: linear-gradient(135deg, #37383d 0%, black 100%);
   align-self: stretch; }
 
-.article-preview__time {
+.gallery__item__time {
   display: block;
   margin-bottom: 6px;
   font-size: 12px;
   text-transform: uppercase; }
 
-.article-preview--large {
+.gallery__item--large {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   width: calc(70% - 2px); }
 
-.article-preview__content {
+.gallery__item__content {
   width: 100%; }
 
-.article-preview__content {
+.gallery__item__content {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   width: 60%; }
 
-.article-preview__summary {
+.gallery__item__summary {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 300; }
 
 @media screen and (min-width: 801px) {
-  .article-preview {
+  .gallery__item {
     min-height: 300px; }
 
-  .article-preview__img--small {
+  .gallery__item__img--small {
     flex: 0 1 150px; }
 
-  .article-preview--large .article-preview__img {
+  .gallery__item--large .gallery__item__img {
     height: 100%; }
 
-  .article-preview--small {
+  .gallery__item--small {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -132,61 +168,104 @@ body {
     width: calc(30% - 2px);
     margin: 1px; }
 
-  .article-preview__img--small {
+  .gallery__item__img--small {
     width: 100%;
     max-height: 150px; }
 
-  .article-preview__content {
+  .gallery__item__content {
     width: 100%; }
 
-  .article-preview__title--small {
+  .gallery__item__title--small {
     font-size: 24px; }
 
-  .article-preview__summary--small {
+  .gallery__item__summary--small {
     font-size: 14px; } }
 @media screen and (max-width: 800px) {
-  .article-gallery {
+  .gallery {
     flex-direction: column; }
 
-  .article-preview {
+  .gallery__item {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: stretch;
     width: calc(100% - 2px); }
 
-  .article-preview:nth-child(even) {
+  .gallery__item:nth-child(even) {
     flex-direction: row-reverse; }
-    .article-preview:nth-child(even) .article-preview__content {
+    .gallery__item:nth-child(even) .gallery__item__content {
       align-items: flex-end;
       text-align: right; }
 
-  .article-preview__img {
+  .gallery__item__img {
     width: 50% !important;
     min-width: 0;
     height: 20vh;
     max-height: none !important; }
 
-  .article-preview__time {
+  .gallery__item__time {
     margin-bottom: 4px; }
 
-  .article-preview__title {
+  .gallery__item__title {
     font-size: 30px; }
 
-  .article-preview__content {
+  .gallery__item__content {
     width: 50% !important;
     font-size: 16px; } }
 @media screen and (max-width: 600px) {
-  .article-preview {
+  .gallery__item {
     flex-direction: column !important; }
-    .article-preview > * {
+    .gallery__item > * {
       width: 100% !important; }
 
-  .article-preview:nth-child(even) .article-preview__content {
+  .gallery__item:nth-child(even) .gallery__item__content {
     align-items: flex-start;
     text-align: left; }
 
-  .article-preview__img {
+  .gallery__item__img {
     background-position-y: -10px; } }
+.feed-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px #207ce5 solid; }
+
+.feed-item__image {
+  margin-right: 10px; }
+
+.feed-item__title {
+  margin-top: 0; }
+
+footer {
+  margin-bottom: 20px; }
+  footer .logo-image {
+    margin-left: auto;
+    margin-right: auto; }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%; }
+
+body {
+  margin-top: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: #191919;
+  background: linear-gradient(135deg, #37383d 0%, black 100%) fixed;
+  color: #fff; }
+
+.wrap {
+  width: 95%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto; }
+
+main {
+  margin-bottom: 40px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,8 +2,18 @@
   @include flex(row, nowrap, space-between, flex-start);
 }
 .col--70{
-  width: 70%;
+  width: 80%;
 }
 .col--30{
   width: 30%;
+}
+@media screen and (max-width: 800px){
+  .feed{
+    width: 95%;
+  }
+}
+@media screen and (max-width: 600px){
+  .feed-item__image{
+    display: none;
+  }
 }

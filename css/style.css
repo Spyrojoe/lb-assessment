@@ -5,16 +5,35 @@
   align-items: flex-start; }
 
 .col--70 {
-  width: 70%; }
+  width: 80%; }
 
 .col--30 {
   width: 30%; }
 
+@media screen and (max-width: 800px) {
+  .feed {
+    width: 95%; } }
+@media screen and (max-width: 600px) {
+  .feed-item__image {
+    display: none; } }
 .nav__row {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-end; }
+
+.header__row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; }
+
+form p {
+  margin-top: 0; }
+
+input {
+  width: 200px; }
 
 .logo {
   display: inline-block; }
@@ -37,6 +56,24 @@
   .nav a:last-child {
     margin-right: 0; }
 
+@media screen and (max-width: 800px) {
+  .logo {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px; }
+
+  .nav__row {
+    justify-content: center; }
+
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; } }
 .tabs {
   display: flex;
   flex-flow: row nowrap;
@@ -54,25 +91,11 @@
   white-space: nowrap; }
 
 .tab--active {
-  font-size: 14px; }
+  background: #207ce5; }
 
 .material-icons.tabs__mobile-selector {
   display: none; }
 
-@media screen and (max-width: 800px) {
-  .material-icons.tabs__mobile-selector {
-    display: block; }
-
-  .tabs {
-    align-items: center;
-    border: 1px #207ce5 solid; }
-
-  .tab {
-    border: 0; }
-
-  .tab:nth-of-type(2),
-  .tab:nth-of-type(3) {
-    display: none; } }
 .gallery {
   display: flex;
   flex-flow: row wrap;
@@ -86,6 +109,9 @@
   margin: 1px;
   background: #191919;
   overflow: hidden; }
+
+.gallery__item:hover {
+  cursor: pointer; }
 
 .gallery__item__img {
   width: 100%;
@@ -107,6 +133,30 @@
 
 #img4 {
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_92564034.jpeg); }
+
+#img5 {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_77656720.jpg); }
+
+#img6 {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_82337319.jpg); }
+
+#img7 {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_72073411.jpg); }
+
+#img8 {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_103251926.jpg); }
+
+#img9 {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_52415534.jpg); }
+
+#img10 {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_81208397.jpg); }
+
+#img11 {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_79523483.jpg); }
+
+#img12 {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_85774162.jpg); }
 
 .gallery__item__title {
   margin: 0;
@@ -224,6 +274,10 @@
 
   .gallery__item__img {
     background-position-y: -10px; } }
+.feed {
+  margin-left: auto;
+  margin-right: auto; }
+
 .feed-item {
   display: flex;
   flex-flow: row nowrap;
@@ -233,6 +287,9 @@
   padding-bottom: 1em;
   border-bottom: 1px #207ce5 solid; }
 
+.feed-item:hover {
+  cursor: pointer; }
+
 .feed-item__image {
   margin-right: 10px; }
 
@@ -240,7 +297,8 @@
   margin-top: 0; }
 
 footer {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  text-align: center; }
   footer .logo-image {
     margin-left: auto;
     margin-right: auto; }
@@ -264,6 +322,10 @@ body {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto; }
+
+a {
+  color: white;
+  text-decoration: none; }
 
 main {
   margin-bottom: 40px; }

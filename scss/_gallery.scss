@@ -11,6 +11,9 @@
   background: #191919;
   overflow: hidden;
 }
+.gallery__item:hover{
+  cursor: pointer;
+}
 .gallery__item__img{
   width: 100%;
   height: 100%;
@@ -24,6 +27,15 @@
 #img2{background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_51490712.jpeg);}
 #img3{background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_112950832.jpeg);}
 #img4{background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_92564034.jpeg);}
+#img5{background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_77656720.jpg);}
+#img6{background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_82337319.jpg);}
+#img7{background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_72073411.jpg);}
+#img8{background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_103251926.jpg);}
+#img9{background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_52415534.jpg);}
+#img10{background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_81208397.jpg);}
+#img11{background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_79523483.jpg);}
+#img12{background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/97665/AdobeStock_85774162.jpg);}
+
 .gallery__item__title{
   margin: 0;
   // font-family: 'PT Sans Narrow', sans-serif;

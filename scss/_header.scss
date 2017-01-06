@@ -1,7 +1,18 @@
 .nav__row{
-  @include flex(row, nowrap, space-between, flex-end);
+  @include flex(row, wrap, space-between, flex-end);
 }
-
+.header__row{
+  @include flex(row, wrap, space-between, center);
+  margin-bottom: 20px;
+}
+form{
+  p{
+    margin-top: 0;
+  }
+}
+input{
+  width: 200px;
+}
 .logo{
   display: inline-block;
 }
@@ -25,5 +36,22 @@
   }
   a:last-child{
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 800px){
+  .logo{
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+  .nav__row{
+    justify-content: center;
+  }
+  form{
+    @include flex(column, nowrap, center, center);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

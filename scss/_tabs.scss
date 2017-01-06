@@ -24,27 +24,28 @@
 //   background: linear-gradient(45deg, #88bae8 0%, #207ce5 100%);
 // }
 .tab--active{
-  font-size: 14px;
+  // font-size: 14px;
+  background: rgba(32, 124, 229, 1);
 }
 .material-icons.tabs__mobile-selector{
   display: none;
 }
 
-@media screen and (max-width: 800px){
-  // This is for protyping initial state only. Try not to program functionality based on this.
-  .material-icons.tabs__mobile-selector{
-    display: block;
-  }
-  .tabs{
-    align-items: center;
-    border: 1px rgba(32, 124, 229, 1) solid;
-  }
-  .tab{
-    border: 0;
-  }
-  .tab:nth-of-type(2),
-  .tab:nth-of-type(3){
-    display: none;
-  }
-
-}
+// @media screen and (max-width: 800px){
+//
+//   .material-icons.tabs__mobile-selector{
+//     display: block;
+//   }
+//   .tabs{
+//     align-items: center;
+//     border: 1px rgba(32, 124, 229, 1) solid;
+//   }
+//   .tab{
+//     border: 0;
+//   }
+//   .tab:nth-of-type(2),
+//   .tab:nth-of-type(3){
+//     display: none;
+//   }
+//
+// }

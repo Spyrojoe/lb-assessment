@@ -1,7 +1,7 @@
 .gallery{
   @include flex(row, wrap, flex-start, stretch);
   margin-bottom: 20px;
-  padding: 1px;
+  padding: 3px;
   // background: linear-gradient(90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%);
   background: linear-gradient(135deg, rgba(136,186,232,1) 0%,rgba(32,124,229,1) 100%);
 }

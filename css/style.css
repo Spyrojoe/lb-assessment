@@ -79,7 +79,7 @@
   justify-content: flex-start;
   align-items: stretch;
   margin-bottom: 20px;
-  padding: 1px;
+  padding: 3px;
   background: linear-gradient(135deg, #88bae8 0%, #207ce5 100%); }
 
 .gallery__item {

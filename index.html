@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/tab-nav.js"></script>
 </head>
 <body>
 
@@ -33,12 +34,47 @@
     </header>
 
     <main>
-      <section class="gallery">
+      <section class="gallery" id="gallery">
         <article class="gallery__item gallery__item--large">
           <div class="gallery__item__img gallery__item__img--large" id="img1"></div>
           <div class="gallery__item__content">
             <time datetime="2016-12-15" class="gallery__item__time">December 15, 2016</time>
             <h2 class="gallery__item__title">The Cloud: Just someone else's computer?</h2>
+            <p class="gallery__item__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </article>
+        <article class="gallery__item gallery__item--small">
+          <div class="gallery__item__img gallery__item__img--small" id="img2"></div>
+          <div class="gallery__item__content gallery__item__content--small">
+            <time datetime="2016-12-15" class="gallery__item__time">December 15, 2016</time>
+            <h2 class="gallery__item__title gallery__item__title--small">No, this toothbrush</h2>
+            <p class="gallery__item__summary gallery__item__summary--small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </article>
+        <article class="gallery__item gallery__item--small">
+          <div class="gallery__item__img gallery__item__img--small" id="img3"></div>
+          <div class="gallery__item__content gallery__item__content--small">
+            <time datetime="2016-12-15" class="gallery__item__time">December 15, 2016</time>
+            <h2 class="gallery__item__title gallery__item__title--small">Battery cells are now in production at Tesla’s Gigafactory</h2>
+            <p class="gallery__item__summary gallery__item__summary--small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </article>
+        <article class="gallery__item gallery__item--large" style="flex-direction: row-reverse;">
+          <div class="gallery__item__img gallery__item__img--large" id="img4"></div>
+          <div class="gallery__item__content">
+            <time datetime="2016-12-15" class="gallery__item__time">December 15, 2016</time>
+            <h2 class="gallery__item__title">Amazon’s Alexa is everywhere at CES 2017</h2>
+            <p class="gallery__item__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="gallery" id="topViewed">
+        <article class="gallery__item gallery__item--large">
+          <div class="gallery__item__img gallery__item__img--large" id="img1"></div>
+          <div class="gallery__item__content">
+            <time datetime="2016-12-15" class="gallery__item__time">December 15, 2016</time>
+            <h2 class="gallery__item__title">Top Viewed</h2>
             <p class="gallery__item__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </article>
